@@ -2,20 +2,22 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- GOOGLE VERIFICATION -->
   <meta
+    id="3864lx"
     name="google-site-verification"
     content="vZR6y-aM9ktrScabtXrS0OPEXSvErhXCzSyXhW2w1UE"
+  >
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
   >
 
   <meta
     name="description"
     content="Falaniko Niko To'o — multi-sport athlete in American football, boxing, rugby and volleyball."
   >
-
-  <meta name="theme-color" content="#062650">
 
   <title>Niko To'o | Athlete Profile</title>
 
@@ -32,9 +34,13 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f4f5f6;
-      color: #101010;
-      overflow-x: hidden;
+      background: #f4f5f7;
+      color: #101828;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
     }
 
     a {
@@ -42,973 +48,1113 @@
       text-decoration: none;
     }
 
-    /* TOP BAR */
+    /* =========================
+       NAVIGATION
+    ========================= */
 
-    .topbar {
-      background: #062650;
-      color: white;
-      min-height: 78px;
-      padding: 0 7%;
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
 
-      border-bottom: 5px solid #d9dde2;
+      padding: 18px 6%;
+
+      background: rgba(10, 18, 32, 0.96);
+      color: white;
+
+      border-bottom: 1px solid rgba(255,255,255,.12);
+      backdrop-filter: blur(10px);
     }
 
-    .school-mark {
-      font-size: 13px;
+    .nav-logo {
+      font-size: 18px;
       font-weight: 900;
-      letter-spacing: .18em;
-      text-transform: uppercase;
+      letter-spacing: 2px;
     }
 
-    .football-mark {
-      font-size: 12px;
-      font-weight: 900;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      opacity: .75;
-    }
-
-    /* NAV */
-
-    .nav {
-      background: white;
-
+    .nav-links {
       display: flex;
-      justify-content: center;
-      gap: 40px;
-
-      padding: 15px 7%;
-
-      border-bottom: 1px solid #d8d8d8;
-
-      position: sticky;
-      top: 0;
-      z-index: 20;
+      gap: 25px;
+      list-style: none;
     }
 
-    .nav a {
-      font-size: 11px;
-      font-weight: 900;
-      letter-spacing: .12em;
+    .nav-links a {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
       text-transform: uppercase;
-      color: #555;
+      opacity: .85;
+      transition: .2s ease;
     }
 
-    .nav a:hover {
-      color: #062650;
+    .nav-links a:hover {
+      opacity: 1;
     }
 
-    /* MAIN PROFILE */
+    /* =========================
+       HERO
+    ========================= */
 
-    .player-hero {
-      min-height: calc(100vh - 78px);
+    .hero {
+      min-height: calc(100vh - 70px);
+
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
 
       background:
         linear-gradient(
           135deg,
-          #dfe3e7 0%,
-          #f8f8f8 50%,
-          #e7eaed 100%
+          #08111f 0%,
+          #101d31 55%,
+          #d9dde3 55%,
+          #f4f5f7 100%
         );
 
-      display: grid;
-      grid-template-columns: .9fr 1.1fr;
+      color: white;
+    }
 
-      gap: 65px;
-
-      align-items: center;
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
       padding: 70px 8%;
     }
 
-    /* PROFILE PHOTO */
-
-    .player-photo {
-      position: relative;
-      max-width: 480px;
-      width: 100%;
-      justify-self: center;
-    }
-
-    .player-photo::before {
-      content: "";
-
-      position: absolute;
-
-      top: -14px;
-      left: -14px;
-      right: 14px;
-      bottom: 14px;
-
-      border: 4px solid #062650;
-    }
-
-    .player-photo::after {
-      content: "ATHLETE PROFILE";
-
-      position: absolute;
-
-      bottom: 16px;
-      left: -7px;
-
-      background: #062650;
-      color: white;
-
-      padding: 10px 15px;
-
-      font-size: 9px;
-      font-weight: 900;
-
-      letter-spacing: .16em;
-    }
-
-    .player-photo img {
-      position: relative;
-      z-index: 2;
-
-      width: 100%;
-
-      display: block;
-
-      aspect-ratio: 4 / 5;
-
-      object-fit: cover;
-
-      background: #ccc;
-    }
-
-    /* PLAYER INFORMATION */
-
-    .player-info {
-      max-width: 700px;
-    }
-
-    .profile-heading {
-      color: #062650;
-
+    .eyebrow {
       font-size: 12px;
       font-weight: 900;
-
-      letter-spacing: .22em;
+      letter-spacing: 3px;
       text-transform: uppercase;
-
+      color: #98a2b3;
       margin-bottom: 15px;
     }
 
-    .player-name {
-      font-size: clamp(60px, 9vw, 120px);
-
-      line-height: .82;
-
-      letter-spacing: -.07em;
-
+    .hero h1 {
+      font-size: clamp(55px, 8vw, 105px);
+      line-height: .86;
+      letter-spacing: -5px;
       text-transform: uppercase;
-
-      color: #30343a;
-
-      margin-bottom: 35px;
+      margin-bottom: 25px;
     }
 
-    .player-name span {
-      color: #062650;
-    }
-
-    /* PLAYER DETAILS */
-
-    .player-details {
-      display: grid;
-
-      grid-template-columns:
-        repeat(3, minmax(100px, 1fr));
-
-      border-top: 3px solid #062650;
-      border-bottom: 1px solid #bfc4c9;
-
-      margin-bottom: 28px;
-    }
-
-    .detail {
-      padding: 18px 12px;
-
-      border-right: 1px solid #c8ccd0;
-    }
-
-    .detail:last-child {
-      border-right: none;
-    }
-
-    .detail small {
+    .hero h1 span {
       display: block;
-
-      color: #777;
-
-      font-size: 9px;
-      font-weight: 900;
-
-      letter-spacing: .15em;
-
-      margin-bottom: 5px;
+      color: #d0d5dd;
     }
 
-    .detail strong {
-      display: block;
-
-      color: #062650;
-
-      font-size: 16px;
-
-      text-transform: uppercase;
-    }
-
-    .player-description {
-      max-width: 620px;
-
-      color: #555;
-
+    .hero-description {
+      max-width: 560px;
+      color: #d0d5dd;
       font-size: 17px;
-
       line-height: 1.7;
-
-      margin-bottom: 28px;
+      margin-bottom: 30px;
     }
 
-    /* BUTTONS */
-
-    .profile-buttons {
+    .hero-buttons {
       display: flex;
-
-      gap: 12px;
-
       flex-wrap: wrap;
+      gap: 12px;
     }
 
     .button {
       display: inline-block;
+      padding: 14px 22px;
 
-      background: #062650;
+      background: white;
+      color: #101828;
 
-      color: white;
-
-      padding: 14px 23px;
-
-      font-size: 11px;
+      font-size: 12px;
       font-weight: 900;
-
-      letter-spacing: .12em;
-
+      letter-spacing: 1px;
       text-transform: uppercase;
 
-      transition: .2s;
+      border: 1px solid white;
+      transition: .2s ease;
     }
 
     .button:hover {
-      transform: translateY(-3px);
-
-      background: #0b376e;
+      transform: translateY(-2px);
     }
 
-    .button.light {
+    .button.dark {
+      background: transparent;
+      color: white;
+      border-color: rgba(255,255,255,.4);
+    }
+
+    .hero-photo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 50px;
+    }
+
+    .hero-photo-frame {
+      position: relative;
+      width: min(440px, 100%);
       background: white;
+      padding: 12px;
 
-      color: #062650;
-
-      border: 1px solid #b9bec3;
+      box-shadow: 0 30px 70px rgba(0,0,0,.25);
+      transform: rotate(1deg);
     }
 
-    /* SECTIONS */
+    .hero-photo-frame img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-caption {
+      position: absolute;
+      bottom: 22px;
+      left: 25px;
+
+      padding: 10px 14px;
+
+      background: #101828;
+      color: white;
+
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* =========================
+       GENERAL SECTIONS
+    ========================= */
 
     section {
-      padding: 100px 8%;
+      padding: 100px 7%;
     }
 
-    .section-number {
-      color: #777;
+    .section-heading {
+      max-width: 780px;
+      margin-bottom: 55px;
+    }
 
-      font-size: 10px;
-      font-weight: 900;
+    .section-heading h2 {
+      margin-bottom: 18px;
 
-      letter-spacing: .2em;
-
+      font-size: clamp(40px, 6vw, 72px);
+      line-height: .95;
+      letter-spacing: -3px;
       text-transform: uppercase;
-
-      margin-bottom: 12px;
     }
 
-    .section-title {
-      color: #062650;
-
-      font-size: clamp(42px, 6vw, 75px);
-
-      line-height: .9;
-
-      letter-spacing: -.06em;
-
-      text-transform: uppercase;
-
-      margin-bottom: 30px;
+    .section-heading p:last-child {
+      color: #667085;
+      font-size: 17px;
+      line-height: 1.7;
     }
 
-    /* ABOUT */
+    /* =========================
+       ABOUT
+    ========================= */
 
     .about {
       background: white;
-
-      border-top: 1px solid #ddd;
     }
 
     .about-grid {
       display: grid;
-
-      grid-template-columns: 1.1fr .9fr;
-
-      gap: 70px;
-
-      align-items: start;
-    }
-
-    .about-text {
-      color: #555;
-
-      font-size: 18px;
-
-      line-height: 1.8;
-
-      max-width: 720px;
-    }
-
-    .about-text p + p {
-      margin-top: 18px;
-    }
-
-    /* STATS */
-
-    .stats {
-      display: grid;
-
       grid-template-columns: 1fr 1fr;
-
-      gap: 12px;
+      gap: 60px;
+      max-width: 1200px;
     }
 
-    .stat {
-      background: #f1f2f3;
-
-      border: 1px solid #d6d8da;
-
-      padding: 25px;
-
-      min-height: 130px;
+    .about-card {
+      padding: 35px;
+      border: 1px solid #d0d5dd;
+      background: #f9fafb;
     }
 
-    .stat strong {
-      display: block;
-
-      color: #062650;
-
-      font-size: 38px;
-
-      margin-bottom: 8px;
-    }
-
-    .stat span {
-      color: #777;
-
-      font-size: 10px;
-      font-weight: 900;
-
-      letter-spacing: .14em;
-
+    .about-card h3 {
+      margin-bottom: 15px;
+      font-size: 25px;
       text-transform: uppercase;
     }
 
-    /* SPORTS */
+    .about-card p {
+      color: #667085;
+      line-height: 1.8;
+    }
 
-    .sports-section {
-      background: #eef0f2;
+    /* =========================
+       SPORTS
+    ========================= */
+
+    .sports {
+      background: #101828;
+      color: white;
+    }
+
+    .sports .section-heading p:last-child {
+      color: #98a2b3;
     }
 
     .sports-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(4, 1fr);
-
-      gap: 14px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
     }
 
     .sport-card {
-      background: white;
-
-      border-top: 5px solid #062650;
+      min-height: 260px;
 
       padding: 28px;
 
-      min-height: 220px;
-
       display: flex;
-
       flex-direction: column;
-
       justify-content: flex-end;
 
-      box-shadow:
-        0 5px 20px rgba(0,0,0,.05);
+      background: #172235;
+      border: 1px solid #344054;
 
-      transition: .2s;
+      transition: .25s ease;
     }
 
     .sport-card:hover {
-      transform: translateY(-5px);
+      transform: translateY(-6px);
+      background: #1d2a40;
     }
 
     .sport-number {
-      color: #999;
-
-      font-size: 11px;
-
-      font-weight: 900;
-
-      letter-spacing: .15em;
-
       margin-bottom: auto;
+
+      color: #98a2b3;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 2px;
     }
 
     .sport-card h3 {
-      color: #062650;
-
-      font-size: 25px;
-
-      text-transform: uppercase;
-
       margin-bottom: 8px;
+
+      font-size: 27px;
+      text-transform: uppercase;
     }
 
     .sport-card p {
-      color: #777;
-
-      font-size: 13px;
+      color: #98a2b3;
+      font-size: 14px;
     }
 
-    /* FOOTBALL */
+    /* =========================
+       FOOTBALL PROFILE
+    ========================= */
 
-    .football-profile {
-      background: #062650;
-
-      color: white;
-    }
-
-    .football-profile .section-number {
-      color: #9fb4cf;
-    }
-
-    .football-profile .section-title {
-      color: white;
-    }
-
-    .football-grid {
-      display: grid;
-
-      grid-template-columns: 1fr 1fr;
-
-      gap: 60px;
-
-      align-items: center;
+    .football {
+      background: #eaecf0;
     }
 
     .football-card {
-      background: white;
+      max-width: 1200px;
+      margin: 0 auto;
 
-      color: #111;
-
-      padding: 35px;
-
-      border: 8px solid #d9dde2;
-    }
-
-    .football-card-top {
-      display: flex;
-
-      justify-content: space-between;
-
-      align-items: center;
-
-      border-bottom: 2px solid #062650;
-
-      padding-bottom: 18px;
-
-      margin-bottom: 25px;
-    }
-
-    .football-card-top strong {
-      color: #062650;
-
-      font-size: 14px;
-
-      letter-spacing: .15em;
-    }
-
-    .position {
-      color: #777;
-
-      font-size: 11px;
-
-      font-weight: 900;
-
-      letter-spacing: .12em;
-    }
-
-    .football-name {
-      color: #062650;
-
-      font-size: 52px;
-
-      line-height: .9;
-
-      font-weight: 900;
-
-      text-transform: uppercase;
-
-      margin-bottom: 30px;
-    }
-
-    .football-info {
       display: grid;
+      grid-template-columns: .8fr 1.2fr;
 
+      background: white;
+      border: 1px solid #d0d5dd;
+
+      box-shadow: 0 20px 50px rgba(16,24,40,.08);
+    }
+
+    .football-side {
+      padding: 45px;
+      background: #101828;
+      color: white;
+    }
+
+    .football-side h3 {
+      margin: 10px 0 20px;
+
+      font-size: 48px;
+      line-height: 1;
+      text-transform: uppercase;
+    }
+
+    .football-side p {
+      color: #98a2b3;
+      line-height: 1.7;
+    }
+
+    .football-main {
+      padding: 45px;
+    }
+
+    .football-main h3 {
+      margin-bottom: 20px;
+
+      font-size: 38px;
+      text-transform: uppercase;
+    }
+
+    .football-main p {
+      color: #667085;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .profile-details {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .profile-detail {
+      padding: 18px;
+      background: #f2f4f7;
+      border-left: 4px solid #101828;
+    }
+
+    .profile-detail small {
+      display: block;
+      color: #667085;
+      font-size: 10px;
+      font-weight: 900;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .profile-detail strong {
+      font-size: 15px;
+      text-transform: uppercase;
+    }
+
+    /* =========================
+       BOXING
+    ========================= */
+
+    .boxing-section {
+      background: #f3f4f6;
+      color: #101828;
+    }
+
+    .boxing-profile {
+      display: grid;
       grid-template-columns: 1fr 1fr;
 
-      gap: 10px;
+      max-width: 1200px;
+      margin: 0 auto;
+
+      background: white;
+      border: 1px solid #d0d5dd;
+
+      box-shadow: 0 20px 50px rgba(16,24,40,.08);
     }
 
-    .football-info div {
-      background: #eef0f2;
-
-      padding: 15px;
+    .boxing-image {
+      min-height: 560px;
+      overflow: hidden;
     }
 
-    .football-info small {
+    .boxing-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 560px;
+
       display: block;
+      object-fit: cover;
+    }
 
-      color: #777;
+    .boxing-content {
+      padding: 60px;
 
-      font-size: 9px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
+    .boxing-label {
+      width: fit-content;
+
+      margin-bottom: 18px;
+      padding: 8px 13px;
+
+      background: #101828;
+      color: white;
+
+      font-size: 11px;
       font-weight: 900;
-
-      letter-spacing: .12em;
-
-      margin-bottom: 4px;
+      letter-spacing: 2px;
     }
 
-    .football-info strong {
-      color: #062650;
+    .boxing-content h3 {
+      margin-bottom: 25px;
 
-      font-size: 14px;
+      font-size: clamp(42px, 5vw, 68px);
+      line-height: .95;
+      letter-spacing: -2px;
+      text-transform: uppercase;
     }
 
-    .football-copy {
-      color: #dce5ef;
+    .boxing-content p {
+      max-width: 560px;
 
-      font-size: 18px;
+      margin-bottom: 18px;
 
-      line-height: 1.8;
+      color: #475467;
+      font-size: 16px;
+      line-height: 1.7;
     }
 
-    /* JOURNEY */
+    .boxing-points {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .boxing-points div {
+      padding: 20px;
+
+      background: #f2f4f7;
+      border-left: 4px solid #101828;
+    }
+
+    .boxing-points strong {
+      display: block;
+      margin-bottom: 8px;
+
+      color: #667085;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    .boxing-points span {
+      font-size: 17px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    /* =========================
+       JOURNEY
+    ========================= */
 
     .journey {
       background: white;
     }
 
-    .journey-grid {
+    .journey-list {
+      max-width: 950px;
+      border-top: 1px solid #d0d5dd;
+    }
+
+    .journey-item {
       display: grid;
+      grid-template-columns: 100px 1fr;
 
-      grid-template-columns: 1fr 1fr;
+      gap: 30px;
 
-      gap: 60px;
+      padding: 30px 0;
 
-      align-items: center;
+      border-bottom: 1px solid #d0d5dd;
     }
 
-    .journey-image {
-      background: #eee;
-
-      padding: 10px;
-
-      border: 1px solid #ccc;
+    .journey-number {
+      font-size: 13px;
+      font-weight: 900;
+      color: #667085;
+      letter-spacing: 2px;
     }
 
-    .journey-image img {
-      width: 100%;
-
-      display: block;
-
-      aspect-ratio: 4 / 5;
-
-      object-fit: cover;
+    .journey-item h3 {
+      margin-bottom: 7px;
+      font-size: 24px;
+      text-transform: uppercase;
     }
 
-    .journey-text {
-      color: #555;
-
-      font-size: 18px;
-
-      line-height: 1.8;
+    .journey-item p {
+      color: #667085;
+      line-height: 1.7;
     }
 
-    /* GALLERY */
-
-    .gallery-section {
-      background: #eef0f2;
-    }
+    /* =========================
+       GALLERY
+    ========================= */
 
     .gallery {
-      display: grid;
-
-      grid-template-columns: 1fr 1fr;
-
-      gap: 15px;
+      background: #101828;
+      color: white;
     }
 
-    .gallery img {
+    .gallery .section-heading p:last-child {
+      color: #98a2b3;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+    }
+
+    .gallery-item {
+      grid-column: span 4;
+
+      overflow: hidden;
+      background: #172235;
+      border: 1px solid #344054;
+    }
+
+    .gallery-item.wide {
+      grid-column: span 6;
+    }
+
+    .gallery-item img {
       width: 100%;
+      height: 360px;
 
       display: block;
 
-      background: #ddd;
-
-      border: 1px solid #ccc;
+      object-fit: cover;
+      transition: .3s ease;
     }
 
-    .gallery .wide {
-      grid-column: 1 / -1;
+    .gallery-item:hover img {
+      transform: scale(1.03);
     }
 
-    /* FINAL */
-
-    .final {
-      background: #062650;
-
-      color: white;
-
-      text-align: center;
-    }
-
-    .final .section-title {
-      color: white;
-    }
-
-    .final p {
-      max-width: 600px;
-
-      margin: 0 auto 30px;
-
-      color: #c9d5e2;
-
-      font-size: 17px;
-    }
-
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
-      background: #03182f;
-
-      color: #91a4b8;
-
-      padding: 25px 8%;
+      padding: 45px 7%;
 
       display: flex;
-
       justify-content: space-between;
+      gap: 20px;
 
-      font-size: 11px;
-
-      text-transform: uppercase;
-
-      letter-spacing: .1em;
+      background: #070d16;
+      color: #98a2b3;
     }
 
-    /* TABLET */
+    footer strong {
+      color: white;
+    }
+
+    footer p {
+      font-size: 13px;
+    }
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 900px) {
 
-      .player-hero,
-      .about-grid,
-      .football-grid,
-      .journey-grid {
-        grid-template-columns: 1fr;
+      .nav-links {
+        gap: 12px;
       }
 
-      .player-photo {
-        max-width: 450px;
+      .hero {
+        grid-template-columns: 1fr;
+        background:
+          linear-gradient(
+            180deg,
+            #08111f 0%,
+            #101d31 65%,
+            #d9dde3 65%,
+            #f4f5f7 100%
+          );
+      }
+
+      .hero-content {
+        padding: 70px 7% 40px;
+      }
+
+      .hero-photo {
+        padding: 30px 7% 70px;
+      }
+
+      .about-grid,
+      .football-card,
+      .boxing-profile {
+        grid-template-columns: 1fr;
       }
 
       .sports-grid {
         grid-template-columns: 1fr 1fr;
       }
-    }
 
-    /* PHONE */
+      .boxing-image,
+      .boxing-image img {
+        min-height: 450px;
+      }
+
+      .gallery-item,
+      .gallery-item.wide {
+        grid-column: span 6;
+      }
+    }
 
     @media (max-width: 600px) {
 
-      .topbar {
-        padding: 0 5%;
+      nav {
+        padding: 15px 5%;
       }
 
-      .football-mark {
+      .nav-logo {
+        font-size: 14px;
+      }
+
+      .nav-links {
         display: none;
       }
 
-      .nav {
-        gap: 18px;
+      section {
+        padding: 75px 5%;
       }
 
-      .nav a {
-        font-size: 9px;
-      }
-
-      .player-hero {
-        padding: 55px 6%;
-      }
-
-      .player-name {
-        font-size: 70px;
-      }
-
-      .player-details {
-        grid-template-columns: 1fr;
-      }
-
-      .detail {
-        border-right: none;
-
-        border-bottom: 1px solid #ccc;
-      }
-
-      .detail:last-child {
-        border-bottom: none;
+      .hero h1 {
+        font-size: 55px;
+        letter-spacing: -3px;
       }
 
       .sports-grid {
         grid-template-columns: 1fr;
       }
 
-      .stats {
+      .about-grid {
+        gap: 20px;
+      }
+
+      .about-card {
+        padding: 25px;
+      }
+
+      .football-side,
+      .football-main,
+      .boxing-content {
+        padding: 30px 25px;
+      }
+
+      .profile-details {
         grid-template-columns: 1fr;
       }
 
-      .gallery {
+      .boxing-points {
         grid-template-columns: 1fr;
       }
 
-      .gallery .wide {
-        grid-column: auto;
+      .gallery-item,
+      .gallery-item.wide {
+        grid-column: span 12;
       }
 
-      section {
-        padding: 75px 6%;
+      .gallery-item img {
+        height: 400px;
+      }
+
+      .journey-item {
+        grid-template-columns: 55px 1fr;
+        gap: 15px;
       }
 
       footer {
         flex-direction: column;
-        gap: 8px;
       }
     }
-
   </style>
 </head>
 
 <body>
 
+  <!-- =========================
+       NAVIGATION
+  ========================== -->
 
-  <!-- TOP BAR -->
+  <nav>
+    <div class="nav-logo">NIKO TO'O</div>
 
-  <header class="topbar">
-
-    <div class="school-mark">
-      NIKO TO'O
-    </div>
-
-    <div class="football-mark">
-      AMERICAN FOOTBALL
-    </div>
-
-  </header>
-
-
-  <!-- NAVIGATION -->
-
-  <nav class="nav">
-
-    <a href="#profile">Profile</a>
-
-    <a href="#about">About</a>
-
-    <a href="#sports">Sports</a>
-
-    <a href="#football">Football</a>
-
-    <a href="#gallery">Gallery</a>
-
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#sports">Sports</a></li>
+      <li><a href="#football">Football</a></li>
+      <li><a href="#boxing">Boxing</a></li>
+      <li><a href="#journey">Journey</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+    </ul>
   </nav>
 
 
-  <main id="profile">
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <p class="eyebrow">
+        American Football • Athlete Profile
+      </p>
+
+      <h1>
+        Niko
+        <span>To'o</span>
+      </h1>
+
+      <p class="hero-description">
+        Multi-sport athlete with a passion for American football,
+        boxing, rugby and volleyball. This is my athlete profile,
+        journey and collection of moments from sport.
+      </p>
+
+      <div class="hero-buttons">
+        <a class="button" href="#football">
+          Football Profile
+        </a>
+
+        <a class="button dark" href="#boxing">
+          Boxing Profile
+        </a>
+      </div>
+
+    </div>
 
 
-    <!-- =================================
-         MAIN PROFILE
-         THIS APPEARS FIRST
-    ================================== -->
+    <div class="hero-photo">
 
-    <section class="player-hero">
-
-
-      <!-- MAIN PROFILE PHOTO -->
-
-      <div class="player-photo">
+      <div class="hero-photo-frame">
 
         <img
           src="./IMG_1714.jpeg"
           alt="Niko To'o athlete profile photo"
         >
 
+        <div class="photo-caption">
+          Athlete Profile
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       ABOUT
+  ========================== -->
+
+  <section id="about" class="about">
+
+    <div class="section-heading">
+
+      <p class="eyebrow">
+        About Me
+      </p>
+
+      <h2>
+        Built Through Sport
+      </h2>
+
+      <p>
+        Sport is a major part of my journey. I enjoy competing,
+        learning and developing across different sports while
+        continuing to grow as an athlete.
+      </p>
+
+    </div>
+
+
+    <div class="about-grid">
+
+      <div class="about-card">
+
+        <h3>
+          My Approach
+        </h3>
+
+        <p>
+          I use every sport as an opportunity to learn something
+          different. Training, discipline, teamwork and staying
+          focused are all important parts of my development.
+        </p>
+
       </div>
 
 
-      <!-- PLAYER INFORMATION -->
+      <div class="about-card">
 
-      <div class="player-info">
+        <h3>
+          Multi-Sport
+        </h3>
 
-        <div class="profile-heading">
-          American Football • Athlete Profile
-        </div>
+        <p>
+          My sporting interests include American football, boxing,
+          rugby and volleyball. Each one gives me a different
+          challenge and another way to improve.
+        </p>
 
-        <h1 class="player-name">
-          Niko<br>
-          <span>To'o</span>
-        </h1>
+      </div>
+
+    </div>
+
+  </section>
 
 
-        <div class="player-details">
+  <!-- =========================
+       SPORTS
+  ========================== -->
 
-          <div class="detail">
-            <small>SPORT</small>
+  <section id="sports" class="sports">
+
+    <div class="section-heading">
+
+      <p class="eyebrow">
+        Multi-Sport Athlete
+      </p>
+
+      <h2>
+        Four Sports
+      </h2>
+
+      <p>
+        Different sports. Different challenges. One athlete
+        constantly working to improve.
+      </p>
+
+    </div>
+
+
+    <div class="sports-grid">
+
+      <div class="sport-card">
+        <div class="sport-number">01</div>
+
+        <h3>
+          American Football
+        </h3>
+
+        <p>
+          Competition, teamwork and athletic development.
+        </p>
+      </div>
+
+
+      <div class="sport-card">
+        <div class="sport-number">02</div>
+
+        <h3>
+          Boxing
+        </h3>
+
+        <p>
+          Discipline, conditioning, focus and mindset.
+        </p>
+      </div>
+
+
+      <div class="sport-card">
+        <div class="sport-number">03</div>
+
+        <h3>
+          Rugby
+        </h3>
+
+        <p>
+          Physical competition, teamwork and determination.
+        </p>
+      </div>
+
+
+      <div class="sport-card">
+        <div class="sport-number">04</div>
+
+        <h3>
+          Volleyball
+        </h3>
+
+        <p>
+          Movement, coordination and teamwork.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTBALL PROFILE
+  ========================== -->
+
+  <section id="football" class="football">
+
+    <div class="section-heading">
+
+      <p class="eyebrow">
+        American Football
+      </p>
+
+      <h2>
+        Football Profile
+      </h2>
+
+      <p>
+        A dedicated part of my athletic journey and one of the
+        sports featured on my profile.
+      </p>
+
+    </div>
+
+
+    <div class="football-card">
+
+      <div class="football-side">
+
+        <p class="eyebrow">
+          Athlete
+        </p>
+
+        <h3>
+          Niko<br>To'o
+        </h3>
+
+        <p>
+          American Football
+        </p>
+
+      </div>
+
+
+      <div class="football-main">
+
+        <h3>
+          On The Field
+        </h3>
+
+        <p>
+          American football is an important part of my sporting
+          journey. It gives me the opportunity to compete,
+          work with teammates and continue developing as an athlete.
+        </p>
+
+        <p>
+          My goal is to keep learning, keep training and continue
+          building my experience through sport.
+        </p>
+
+
+        <div class="profile-details">
+
+          <div class="profile-detail">
+            <small>Sport</small>
             <strong>American Football</strong>
           </div>
 
-          <div class="detail">
-            <small>ATHLETE</small>
+          <div class="profile-detail">
+            <small>Athlete</small>
             <strong>Niko To'o</strong>
           </div>
 
-          <div class="detail">
-            <small>PROFILE</small>
+          <div class="profile-detail">
+            <small>Profile</small>
             <strong>Multi-Sport</strong>
           </div>
 
         </div>
 
+      </div>
 
-        <p class="player-description">
-          Multi-sport athlete with a focus on American football,
-          boxing, rugby and volleyball. This profile follows
-          the training, development and journey behind the athlete.
-        </p>
+    </div>
+
+  </section>
 
 
-        <div class="profile-buttons">
+  <!-- =========================
+       BOXING PROFILE
+  ========================== -->
 
-          <a
-            href="#about"
-            class="button"
-          >
-            View Profile
-          </a>
+  <section id="boxing" class="boxing-section">
 
-          <a
-            href="#sports"
-            class="button light"
-          >
-            Sports
-          </a>
+    <div class="section-heading">
 
-        </div>
+      <p class="eyebrow">
+        Boxing Profile
+      </p>
+
+      <h2>
+        The Boxing Side
+      </h2>
+
+      <p>
+        Boxing is another important part of my journey as an
+        athlete. It has helped me develop discipline, focus,
+        conditioning and the mindset to keep improving.
+      </p>
+
+    </div>
+
+
+    <div class="boxing-profile">
+
+      <div class="boxing-image">
+
+        <img
+          src="./boxing-poster.jpeg.jpeg"
+          alt="Niko To'o boxing"
+        >
 
       </div>
 
-    </section>
 
+      <div class="boxing-content">
 
-    <!-- ABOUT -->
-
-    <section
-      id="about"
-      class="about"
-    >
-
-      <div class="about-grid">
-
-        <div>
-
-          <div class="section-number">
-            01 / Player Profile
-          </div>
-
-          <h2 class="section-title">
-            More than<br>
-            one sport.
-          </h2>
-
-          <div class="about-text">
-
-            <p>
-              My name is Falaniko Niko To'o.
-              Sport is a major part of my life and gives me
-              different ways to challenge myself and keep improving.
-            </p>
-
-            <p>
-              I am involved in American football, boxing,
-              rugby and volleyball. Each sport develops different
-              parts of my athletic ability, from movement and
-              coordination to strength, timing and teamwork.
-            </p>
-
-            <p>
-              I am continuing to build my experience and develop
-              as an athlete through training, competition and
-              new opportunities.
-            </p>
-
-          </div>
-
+        <div class="boxing-label">
+          ATHLETE • BOXING
         </div>
 
+        <h3>
+          Niko To'o
+        </h3>
 
-        <div class="stats">
+        <p>
+          Boxing is more than just training. It is about
+          preparation, staying focused and continuing to work
+          when things become difficult.
+        </p>
 
-          <div class="stat">
-            <strong>04</strong>
-            <span>Sports</span>
-          </div>
+        <p>
+          My boxing journey is one part of being a multi-sport
+          athlete, alongside American football, rugby and volleyball.
+        </p>
 
-          <div class="stat">
+
+        <div class="boxing-points">
+
+          <div>
             <strong>01</strong>
-            <span>Athlete</span>
+            <span>Discipline</span>
           </div>
 
-          <div class="stat">
-            <strong>∞</strong>
-            <span>Development</span>
+          <div>
+            <strong>02</strong>
+            <span>Focus</span>
           </div>
 
-          <div class="stat">
-            <strong>24/7</strong>
+          <div>
+            <strong>03</strong>
+            <span>Conditioning</span>
+          </div>
+
+          <div>
+            <strong>04</strong>
             <span>Mindset</span>
           </div>
 
@@ -1016,343 +1162,216 @@
 
       </div>
 
-    </section>
+    </div>
+
+  </section>
 
 
-    <!-- SPORTS -->
+  <!-- =========================
+       JOURNEY
+  ========================== -->
 
-    <section
-      id="sports"
-      class="sports-section"
-    >
+  <section id="journey" class="journey">
 
-      <div class="section-number">
-        02 / Sports
-      </div>
+    <div class="section-heading">
 
-      <h2 class="section-title">
-        Four sports.<br>
-        One athlete.
+      <p class="eyebrow">
+        Athlete Journey
+      </p>
+
+      <h2>
+        Keep Moving Forward
       </h2>
 
+      <p>
+        My journey through different sports continues to shape
+        how I train, compete and approach new challenges.
+      </p>
 
-      <div class="sports-grid">
-
-        <article class="sport-card">
-
-          <div class="sport-number">
-            01
-          </div>
-
-          <h3>
-            American Football
-          </h3>
-
-          <p>
-            Speed, physicality, teamwork and execution.
-          </p>
-
-        </article>
+    </div>
 
 
-        <article class="sport-card">
+    <div class="journey-list">
 
-          <div class="sport-number">
-            02
-          </div>
+      <div class="journey-item">
 
-          <h3>
-            Boxing
-          </h3>
-
-          <p>
-            Timing, movement, discipline and composure.
-          </p>
-
-        </article>
-
-
-        <article class="sport-card">
-
-          <div class="sport-number">
-            03
-          </div>
-
-          <h3>
-            Rugby
-          </h3>
-
-          <p>
-            Strength, awareness, teamwork and toughness.
-          </p>
-
-        </article>
-
-
-        <article class="sport-card">
-
-          <div class="sport-number">
-            04
-          </div>
-
-          <h3>
-            Volleyball
-          </h3>
-
-          <p>
-            Reaction, coordination, movement and explosiveness.
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- FOOTBALL PROFILE -->
-
-    <section
-      id="football"
-      class="football-profile"
-    >
-
-      <div class="football-grid">
+        <div class="journey-number">
+          01
+        </div>
 
         <div>
+          <h3>
+            Discover
+          </h3>
 
-          <div class="section-number">
-            03 / Football
-          </div>
-
-          <h2 class="section-title">
-            Player<br>
-            Profile.
-          </h2>
-
-          <p class="football-copy">
-            A school-style American football profile focused
-            on the player rather than an NFL team or professional
-            league. This section can showcase football development,
-            training and future achievements.
+          <p>
+            Exploring different sports and finding new ways
+            to challenge myself.
           </p>
-
-        </div>
-
-
-        <div class="football-card">
-
-          <div class="football-card-top">
-
-            <strong>
-              AMERICAN FOOTBALL
-            </strong>
-
-            <span class="position">
-              PLAYER PROFILE
-            </span>
-
-          </div>
-
-
-          <div class="football-name">
-            Niko<br>
-            To'o
-          </div>
-
-
-          <div class="football-info">
-
-            <div>
-              <small>SPORT</small>
-              <strong>American Football</strong>
-            </div>
-
-            <div>
-              <small>PLAYER</small>
-              <strong>Niko To'o</strong>
-            </div>
-
-            <div>
-              <small>TYPE</small>
-              <strong>Multi-Sport</strong>
-            </div>
-
-            <div>
-              <small>STATUS</small>
-              <strong>Athlete</strong>
-            </div>
-
-          </div>
-
         </div>
 
       </div>
 
-    </section>
 
+      <div class="journey-item">
 
-    <!-- JOURNEY -->
-
-    <section class="journey">
-
-      <div class="journey-grid">
-
-        <div class="journey-image">
-
-          <img
-            src="./team-photo.jpeg"
-            alt="Niko To'o American football photo"
-          >
-
+        <div class="journey-number">
+          02
         </div>
-
 
         <div>
+          <h3>
+            Train
+          </h3>
 
-          <div class="section-number">
-            04 / The Journey
-          </div>
-
-          <h2 class="section-title">
-            Built through<br>
-            the work.
-          </h2>
-
-          <div class="journey-text">
-
-            <p>
-              Being involved in multiple sports means constantly
-              learning and adapting. Training provides opportunities
-              to improve different parts of my athletic ability.
-            </p>
-
-            <br>
-
-            <p>
-              The goal is simple: keep learning, keep training
-              and keep developing.
-            </p>
-
-          </div>
-
+          <p>
+            Putting time and effort into developing skills,
+            discipline and consistency.
+          </p>
         </div>
 
       </div>
 
-    </section>
 
+      <div class="journey-item">
 
-    <!-- GALLERY -->
+        <div class="journey-number">
+          03
+        </div>
 
-    <section
-      id="gallery"
-      class="gallery-section"
-    >
+        <div>
+          <h3>
+            Compete
+          </h3>
 
-      <div class="section-number">
-        05 / Gallery
+          <p>
+            Taking what I learn in training into competition
+            and continuing to learn from every experience.
+          </p>
+        </div>
+
       </div>
 
-      <h2 class="section-title">
-        The<br>
-        Moments.
+
+      <div class="journey-item">
+
+        <div class="journey-number">
+          04
+        </div>
+
+        <div>
+          <h3>
+            Improve
+          </h3>
+
+          <p>
+            Continuing to work, learn and develop as a
+            multi-sport athlete.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       GALLERY
+  ========================== -->
+
+  <section id="gallery" class="gallery">
+
+    <div class="section-heading">
+
+      <p class="eyebrow">
+        Gallery
+      </p>
+
+      <h2>
+        Athlete Moments
       </h2>
 
+      <p>
+        A collection of photos from my sporting journey.
+      </p>
 
-      <div class="gallery">
+    </div>
 
 
-        <!-- MAIN PROFILE PHOTO -->
+    <div class="gallery-grid">
+
+      <div class="gallery-item wide">
 
         <img
-          class="wide"
           src="./IMG_1714.jpeg"
           alt="Niko To'o profile photo"
         >
 
+      </div>
 
-        <!-- AMERICAN FOOTBALL PHOTO -->
+
+      <div class="gallery-item">
 
         <img
           src="./team-photo.jpeg"
-          alt="Niko To'o American football photo"
+          alt="Team photo"
         >
 
+      </div>
 
-        <!-- TRAINING PHOTO -->
+
+      <div class="gallery-item">
 
         <img
           src="./EBA192E8-D520-45CC-AAE4-34A4E06BFD21.png"
-          alt="Niko To'o training
+          alt="Niko To'o sporting photo"
         >
 
+      </div>
 
-        <!-- BOXING PHOTO -->
+
+      <div class="gallery-item">
 
         <img
           src="./boxing-poster.jpeg.jpeg"
-          alt="Niko To'o boxing photo"
+          alt="Niko To'o boxing"
         >
 
+      </div>
 
-        <!-- ORIGINAL PHOTO -->
+
+      <div class="gallery-item">
 
         <img
-          class="wide"
           src="./niko-poster..jpeg"
-          alt="Niko To'o athlete photo"
+          alt="Niko To'o athlete poster"
         >
 
       </div>
 
-    </section>
+    </div>
+
+  </section>
 
 
-    <!-- FINAL -->
-
-    <section class="final">
-
-      <div class="section-number">
-        06 / The Journey Continues
-      </div>
-
-      <h2 class="section-title">
-        Keep<br>
-        Moving.
-      </h2>
-
-      <p>
-        Follow the training, development and moments
-        that make up Niko To'o's multi-sport journey.
-      </p>
-
-      <a
-        href="#profile"
-        class="button"
-      >
-        Back To Profile
-      </a>
-
-    </section>
-
-  </main>
-
-
-  <!-- FOOTER -->
+  <!-- =========================
+       FOOTER
+  ========================== -->
 
   <footer>
 
-    <span>
-      © 2026 Niko To'o
-    </span>
+    <p>
+      <strong>NIKO TO'O</strong>
+      — Athlete Profile
+    </p>
 
-    <span>
-      Multi-Sport Athlete
-    </span>
+    <p>
+      American Football • Boxing • Rugby • Volleyball
+    </p>
 
   </footer>
-
 
 </body>
 </html>
