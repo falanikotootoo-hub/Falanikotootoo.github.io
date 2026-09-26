@@ -4,11 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Falaniko "Niko" To'o | Athlete Profile</title>
+  <title>Niko To'o | Athlete</title>
 
-  <meta name="description" content="Official athlete profile of Falaniko Niko To'o — boxing, American football, rugby and volleyball.">
-  <meta name="keywords" content="Falaniko To'o, Niko To'o, boxer, American football, rugby, volleyball, athlete">
-  <meta name="author" content="Falaniko To'o">
+  <meta name="description" content="Falaniko Niko To'o — multi-sport athlete in boxing, American football, rugby and volleyball.">
 
   <style>
     * {
@@ -23,27 +21,21 @@
 
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #080808;
-      color: #ffffff;
+      background: #050505;
+      color: white;
       line-height: 1.6;
     }
 
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    /* NAVIGATION */
     nav {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(8, 8, 8, 0.95);
-      border-bottom: 1px solid #292929;
-      backdrop-filter: blur(10px);
+      background: rgba(5,5,5,.94);
+      border-bottom: 1px solid #222;
+      backdrop-filter: blur(12px);
     }
 
-    .nav-inner {
+    .nav {
       max-width: 1100px;
       margin: auto;
       padding: 16px 20px;
@@ -53,76 +45,72 @@
     }
 
     .logo {
-      font-size: 20px;
       font-weight: 900;
       letter-spacing: 2px;
     }
 
-    .nav-links {
+    .links {
       display: flex;
-      gap: 20px;
-      font-size: 14px;
-      font-weight: bold;
+      gap: 22px;
+      font-size: 13px;
     }
 
-    .nav-links a {
-      color: #bbb;
-      transition: 0.2s;
+    .links a {
+      color: #aaa;
+      text-decoration: none;
     }
 
-    .nav-links a:hover {
+    .links a:hover {
       color: white;
     }
 
-    /* HERO */
     .hero {
-      min-height: 88vh;
+      min-height: 90vh;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 70px 20px;
+      padding: 60px 20px;
       background:
-        radial-gradient(circle at top, #242424 0%, #0b0b0b 45%, #050505 100%);
+        radial-gradient(circle at 50% 20%, #292929, #090909 55%, #030303);
     }
 
     .hero-content {
       max-width: 900px;
     }
 
-    .hero-tag {
+    .tag {
       display: inline-block;
-      padding: 7px 14px;
       border: 1px solid #444;
       border-radius: 50px;
-      color: #bbb;
-      font-size: 12px;
+      padding: 7px 15px;
+      color: #aaa;
+      font-size: 11px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      margin-bottom: 22px;
+      margin-bottom: 25px;
     }
 
-    .hero h1 {
-      font-size: clamp(48px, 11vw, 100px);
-      line-height: 0.95;
+    h1 {
+      font-size: clamp(55px, 12vw, 110px);
+      line-height: .88;
+      letter-spacing: -5px;
       text-transform: uppercase;
-      letter-spacing: -4px;
-      margin-bottom: 22px;
     }
 
-    .hero h1 span {
-      color: #999;
+    h1 span {
+      color: #777;
     }
 
     .hero p {
       max-width: 650px;
-      margin: auto;
-      color: #bbb;
+      margin: 28px auto 0;
+      color: #aaa;
       font-size: 18px;
     }
 
-    .hero-buttons {
-      margin-top: 32px;
+    .buttons {
+      margin-top: 30px;
       display: flex;
       justify-content: center;
       gap: 12px;
@@ -131,54 +119,46 @@
 
     .button {
       padding: 13px 22px;
-      border-radius: 6px;
       border: 1px solid #444;
+      border-radius: 6px;
+      text-decoration: none;
       font-weight: bold;
-      transition: 0.2s;
     }
 
-    .button.primary {
+    .primary {
       background: white;
       color: black;
     }
 
-    .button:hover {
-      transform: translateY(-2px);
-      opacity: 0.85;
-    }
-
-    /* GENERAL */
     section {
       max-width: 1100px;
       margin: auto;
       padding: 90px 20px;
     }
 
-    .section-label {
-      color: #777;
-      text-transform: uppercase;
-      font-size: 12px;
+    .label {
+      color: #666;
+      font-size: 11px;
       letter-spacing: 3px;
+      text-transform: uppercase;
       font-weight: bold;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
-    .section-title {
-      font-size: clamp(32px, 6vw, 52px);
+    .title {
+      font-size: clamp(35px, 7vw, 58px);
       line-height: 1;
       margin-bottom: 45px;
     }
 
-    /* ABOUT */
-    .about-grid {
+    .about {
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
+      grid-template-columns: 1.2fr .8fr;
       gap: 50px;
-      align-items: start;
     }
 
     .about-text {
-      color: #bbb;
+      color: #aaa;
       font-size: 17px;
     }
 
@@ -186,194 +166,175 @@
       margin-bottom: 18px;
     }
 
-    .stats {
+    .facts {
       display: grid;
       gap: 12px;
     }
 
-    .stat {
-      border: 1px solid #292929;
-      background: #111;
+    .fact {
       padding: 20px;
+      border: 1px solid #222;
+      background: #101010;
       border-radius: 8px;
     }
 
-    .stat strong {
+    .fact strong {
       display: block;
-      font-size: 25px;
-      margin-bottom: 3px;
+      font-size: 24px;
     }
 
-    .stat span {
-      color: #777;
+    .fact span {
+      color: #666;
       font-size: 13px;
     }
 
-    /* SPORTS */
-    .sports-grid {
+    .sports {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 14px;
     }
 
-    .sport-card {
-      min-height: 220px;
-      border: 1px solid #292929;
-      background: linear-gradient(145deg, #171717, #0c0c0c);
-      padding: 25px;
+    .sport {
+      min-height: 230px;
+      padding: 22px;
+      border: 1px solid #242424;
       border-radius: 10px;
+      background: linear-gradient(145deg,#181818,#0b0b0b);
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      transition: 0.25s;
+      transition: .25s;
     }
 
-    .sport-card:hover {
+    .sport:hover {
       transform: translateY(-5px);
       border-color: #555;
     }
 
     .sport-number {
       color: #555;
-      font-size: 14px;
       margin-bottom: auto;
+      font-size: 13px;
     }
 
-    .sport-card h3 {
-      font-size: 26px;
+    .sport h3 {
+      font-size: 25px;
       text-transform: uppercase;
     }
 
-    .sport-card p {
-      color: #888;
+    .sport p {
+      color: #777;
       font-size: 13px;
-      margin-top: 5px;
     }
 
-    /* ACHIEVEMENTS */
-    .achievement-list {
+    .timeline {
       display: grid;
-      gap: 12px;
+      gap: 14px;
     }
 
-    .achievement {
+    .item {
       display: flex;
       gap: 20px;
-      align-items: center;
-      border: 1px solid #292929;
-      background: #111;
-      padding: 20px;
+      padding: 22px;
+      background: #101010;
+      border: 1px solid #242424;
       border-radius: 8px;
     }
 
-    .achievement-number {
-      font-size: 28px;
-      font-weight: 900;
+    .number {
       color: #555;
-      min-width: 40px;
+      font-size: 25px;
+      font-weight: 900;
     }
 
-    .achievement h3 {
-      font-size: 17px;
+    .item h3 {
+      font-size: 18px;
     }
 
-    .achievement p {
-      color: #888;
-      font-size: 13px;
+    .item p {
+      color: #777;
+      font-size: 14px;
     }
 
-    /* GALLERY */
     .gallery {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 18px;
     }
 
-    .gallery-item {
-      background: #111;
-      border: 1px solid #292929;
-      border-radius: 10px;
+    .gallery-card {
       overflow: hidden;
+      border-radius: 10px;
+      border: 1px solid #242424;
+      background: #101010;
     }
 
-    .gallery img {
+    .gallery-card img {
       width: 100%;
       height: auto;
       display: block;
     }
 
-    .gallery-caption {
-      padding: 15px;
-      color: #888;
+    .caption {
+      padding: 14px;
+      color: #777;
       font-size: 13px;
     }
 
-    /* QUOTE */
     .quote {
-      max-width: 850px;
-      margin: auto;
       text-align: center;
-      padding: 90px 20px;
+      padding: 100px 20px;
+      border-top: 1px solid #181818;
+      border-bottom: 1px solid #181818;
     }
 
-    .quote p {
-      font-size: clamp(28px, 5vw, 55px);
-      font-weight: 800;
+    .quote h2 {
+      max-width: 850px;
+      margin: auto;
+      font-size: clamp(30px, 6vw, 60px);
       line-height: 1.05;
       text-transform: uppercase;
     }
 
-    .quote span {
-      display: block;
-      color: #666;
+    .quote p {
       margin-top: 20px;
-      font-size: 13px;
+      color: #555;
       letter-spacing: 2px;
+      font-size: 12px;
     }
 
-    /* FOOTER */
     footer {
-      border-top: 1px solid #222;
       text-align: center;
       padding: 35px 20px;
-      color: #666;
-      font-size: 13px;
+      color: #555;
+      font-size: 12px;
     }
 
-    /* MOBILE */
-    @media (max-width: 800px) {
-      .nav-links {
+    @media(max-width:800px) {
+      .links {
         display: none;
       }
 
-      .about-grid {
+      .about {
         grid-template-columns: 1fr;
       }
 
-      .sports-grid {
-        grid-template-columns: repeat(2, 1fr);
+      .sports {
+        grid-template-columns: repeat(2,1fr);
       }
 
       .gallery {
         grid-template-columns: 1fr;
       }
-
-      section {
-        padding: 65px 18px;
-      }
     }
 
-    @media (max-width: 500px) {
-      .sports-grid {
+    @media(max-width:500px) {
+      .sports {
         grid-template-columns: 1fr;
       }
 
-      .hero h1 {
-        letter-spacing: -2px;
-      }
-
-      .achievement {
-        align-items: flex-start;
+      h1 {
+        letter-spacing: -3px;
       }
     }
   </style>
@@ -381,219 +342,231 @@
 
 <body>
 
-  <!-- NAVIGATION -->
-  <nav>
-    <div class="nav-inner">
-      <div class="logo">NIKO TO'O</div>
+<nav>
+  <div class="nav">
+    <div class="logo">NIKO TO'O</div>
 
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#sports">Sports</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#gallery">Gallery</a>
-      </div>
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#sports">Sports</a>
+      <a href="#journey">Journey</a>
+      <a href="#gallery">Gallery</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="hero-content">
+<header class="hero">
 
-      <div class="hero-tag">Athlete Profile • 2026</div>
+  <div class="hero-content">
 
-      <h1>
-        Falaniko<br>
-        <span>"Niko" To'o</span>
-      </h1>
+    <div class="tag">Athlete Profile • 2026</div>
 
-      <p>
-        Multi-sport athlete competing and developing across
-        boxing, American football, rugby and volleyball.
-      </p>
+    <h1>
+      Falaniko<br>
+      <span>"Niko" To'o</span>
+    </h1>
 
-      <div class="hero-buttons">
-        <a class="button primary" href="#sports">Explore Profile</a>
-        <a class="button" href="#gallery">View Gallery</a>
-      </div>
-
-    </div>
-  </header>
-
-
-  <!-- ABOUT -->
-  <section id="about">
-
-    <div class="section-label">01 — About</div>
-    <h2 class="section-title">The Athlete</h2>
-
-    <div class="about-grid">
-
-      <div class="about-text">
-        <p>
-          Falaniko “Niko” To’o is an Australian multi-sport athlete
-          developing across several competitive sports.
-        </p>
-
-        <p>
-          His sporting background includes boxing, American football,
-          rugby and volleyball, with a focus on discipline, training,
-          competition experience and continued development.
-        </p>
-
-        <p>
-          This website is a public athlete profile documenting Niko's
-          sporting journey, interests and future development.
-        </p>
-      </div>
-
-      <div class="stats">
-
-        <div class="stat">
-          <strong>4</strong>
-          <span>Sports</span>
-        </div>
-
-        <div class="stat">
-          <strong>2026</strong>
-          <span>Current sporting year</span>
-        </div>
-
-        <div class="stat">
-          <strong>Multi-Sport</strong>
-          <span>Athlete profile</span>
-        </div>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- SPORTS -->
-  <section id="sports">
-
-    <div class="section-label">02 — Sports</div>
-    <h2 class="section-title">Competition & Development</h2>
-
-    <div class="sports-grid">
-
-      <div class="sport-card">
-        <div class="sport-number">01</div>
-        <h3>Boxing</h3>
-        <p>Training, competition and development.</p>
-      </div>
-
-      <div class="sport-card">
-        <div class="sport-number">02</div>
-        <h3>American Football</h3>
-        <p>Team sport, athletic development and competition.</p>
-      </div>
-
-      <div class="sport-card">
-        <div class="sport-number">03</div>
-        <h3>Rugby</h3>
-        <p>Physical preparation, teamwork and competition.</p>
-      </div>
-
-      <div class="sport-card">
-        <div class="sport-number">04</div>
-        <h3>Volleyball</h3>
-        <p>Movement, teamwork and skill development.</p>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ACHIEVEMENTS -->
-  <section id="achievements">
-
-    <div class="section-label">03 — Achievements</div>
-    <h2 class="section-title">Sporting Journey</h2>
-
-    <div class="achievement-list">
-
-      <div class="achievement">
-        <div class="achievement-number">01</div>
-        <div>
-          <h3>Boxing Competition Experience</h3>
-          <p>Developing through training and competitive boxing.</p>
-        </div>
-      </div>
-
-      <div class="achievement">
-        <div class="achievement-number">02</div>
-        <div>
-          <h3>Multi-Sport Athlete</h3>
-          <p>Active development across four different sports.</p>
-        </div>
-      </div>
-
-      <div class="achievement">
-        <div class="achievement-number">03</div>
-        <div>
-          <h3>Continued Development</h3>
-          <p>Focused on improving skills, discipline and performance.</p>
-        </div>
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- QUOTE -->
-  <div class="quote">
     <p>
-      “Hard work builds freedom.<br>
-      Discipline creates opportunity.”
+      Multi-sport athlete developing across boxing,
+      American football, rugby and volleyball.
     </p>
 
-    <span>NIKO TO'O</span>
+    <div class="buttons">
+      <a class="button primary" href="#sports">Explore</a>
+      <a class="button" href="#gallery">Gallery</a>
+    </div>
+
   </div>
 
+</header>
 
-  <!-- GALLERY -->
-  <section id="gallery">
 
-    <div class="section-label">04 — Gallery</div>
-    <h2 class="section-title">Featured</h2>
+<section id="about">
 
-    <div class="gallery">
+  <div class="label">01 — About</div>
+  <h2 class="title">The Athlete</h2>
 
-      <div class="gallery-item">
-        <img
-src="./niko-poster..jpeg"
-          alt="Falaniko Niko To'o athlete poster"
-        >
+  <div class="about">
 
-        <div class="gallery-caption">
-          Multi-sport athlete poster
-        </div>
+    <div class="about-text">
+
+      <p>
+        Falaniko “Niko” To'o is an Australian multi-sport
+        athlete developing across several competitive sports.
+      </p>
+
+      <p>
+        His sporting background includes boxing, American
+        football, rugby and volleyball.
+      </p>
+
+      <p>
+        His focus is on discipline, training, competition
+        experience and continued athletic development.
+      </p>
+
+    </div>
+
+    <div class="facts">
+
+      <div class="fact">
+        <strong>4</strong>
+        <span>Sports</span>
       </div>
 
-      <div class="gallery-item">
-        <img
-     src="./boxing-poster.jpeg.jpeg"
-          alt="Boxing championship poster"
-        >
+      <div class="fact">
+        <strong>2026</strong>
+        <span>Current sporting year</span>
+      </div>
 
-        <div class="gallery-caption">
-          Boxing competition poster
-        </div>
+      <div class="fact">
+        <strong>Multi-Sport</strong>
+        <span>Athlete profile</span>
       </div>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Falaniko “Niko” To'o</p>
-    <p>Athlete Profile</p>
-  </footer>
+<section id="sports">
+
+  <div class="label">02 — Sports</div>
+  <h2 class="title">Built Across Sports</h2>
+
+  <div class="sports">
+
+    <div class="sport">
+      <div class="sport-number">01</div>
+      <h3>Boxing</h3>
+      <p>Training, competition and development.</p>
+    </div>
+
+    <div class="sport">
+      <div class="sport-number">02</div>
+      <h3>American Football</h3>
+      <p>Team sport, athletic development and competition.</p>
+    </div>
+
+    <div class="sport">
+      <div class="sport-number">03</div>
+      <h3>Rugby</h3>
+      <p>Teamwork, physical preparation and competition.</p>
+    </div>
+
+    <div class="sport">
+      <div class="sport-number">04</div>
+      <h3>Volleyball</h3>
+      <p>Movement, teamwork and skill development.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="journey">
+
+  <div class="label">03 — Journey</div>
+  <h2 class="title">Development</h2>
+
+  <div class="timeline">
+
+    <div class="item">
+      <div class="number">01</div>
+      <div>
+        <h3>Boxing Competition</h3>
+        <p>
+          Building experience through boxing training and competition.
+        </p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="number">02</div>
+      <div>
+        <h3>Multi-Sport Training</h3>
+        <p>
+          Developing skills across four different sporting environments.
+        </p>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="number">03</div>
+      <div>
+        <h3>Continued Progress</h3>
+        <p>
+          Working on athletic skills, discipline and performance.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<div class="quote">
+
+  <h2>
+    “Hard work builds freedom.
+    Discipline creates opportunity.”
+  </h2>
+
+  <p>NIKO TO'O</p>
+
+</div>
+
+
+<section id="gallery">
+
+  <div class="label">04 — Gallery</div>
+  <h2 class="title">Featured</h2>
+
+  <div class="gallery">
+
+    <div class="gallery-card">
+
+      <img
+        src="./niko-poster..jpeg"
+        alt="Falaniko Niko To'o athlete poster"
+      >
+
+      <div class="caption">
+        Niko To'o — Multi-Sport Athlete
+      </div>
+
+    </div>
+
+
+    <div class="gallery-card">
+
+      <img
+        src="./boxing-poster.jpeg.jpeg"
+        alt="Boxing championship poster"
+      >
+
+      <div class="caption">
+        Boxing — Competition Poster
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <p>© 2026 Falaniko “Niko” To'o</p>
+  <p>Athlete Profile</p>
+
+</footer>
 
 </body>
 </html>
